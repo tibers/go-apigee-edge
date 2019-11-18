@@ -21,16 +21,16 @@ var _ VirtualHostsService = &VirtualHostsServiceOp{}
 
 // https://docs.apigee.com/api-platform/fundamentals/virtual-host-property-reference
 type VirtualHost struct {
-	Name                    string  `json:"name,omitempty"`
-	HostAliases             array   `json:"hostAliases,omitempty"`
-	Port                    int     `json:"port,omitempty"`
-	// Interfaces              array   `json:"interfaces,omitempty"`
-	RetryOptions            array   `json:"retryOptions,omitempty"`
-	ListenOptions           array   `json:"listenOptions,omitempty"`
-	BaseUrl                 string  `json:"baseUrl,omitempty"`
-	SSLInfo                 hash    `json:"sSLInfo,omitempty"`
+	Name                    string     `json:"name,omitempty"`
+	HostAliases             []string   `json:"hostAliases,omitempty"`
+	Port                    int        `json:"port,omitempty"`
+	// Interfaces           []string   `json:"interfaces,omitempty"`
+	RetryOptions            []string   `json:"retryOptions,omitempty"`
+	ListenOptions           []string   `json:"listenOptions,omitempty"`
+	BaseUrl                 string     `json:"baseUrl,omitempty"`
+	SSLInfo                 []string   `json:"sSLInfo,omitempty"`
 	// PropagateTLSInformation hash    `json:"propagateTLSInformation,omitempty"`
-	Properties              array   `json:"properties,omitempty"`
+	Properties              []string   `json:"properties,omitempty"`
 }
 
 func (s *VirtualHostsServiceOp) Get(name string, env string) (*VirtualHost, *Response, error) {
