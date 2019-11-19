@@ -52,6 +52,7 @@ type EdgeClient struct {
 	CompanyApps   CompanyAppService
 	DeveloperApps DeveloperAppService
 	SharedFlows   SharedFlowService
+	VirtualHosts  VirtualHostsService
 
 	// Account           AccountService
 	// Actions           ActionsService
